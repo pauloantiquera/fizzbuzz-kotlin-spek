@@ -7,6 +7,7 @@ import org.jetbrains.spek.api.dsl.on
 import kotlin.test.assertEquals
 
 class FizzBuzzGameTest : Spek ({
+
     describe("FizzBuzz Game") {
         val game = FizzBuzzGame()
 
