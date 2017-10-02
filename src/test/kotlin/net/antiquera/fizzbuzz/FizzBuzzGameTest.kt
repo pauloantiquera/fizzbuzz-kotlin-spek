@@ -12,7 +12,7 @@ class FizzBuzzGameTest : Spek ({
         val game = FizzBuzzGame()
 
         on("provided number is neither divisible by 3 nor 5") {
-            val result = game.calculate(8)
+            val result = game.defineResponseFor(8)
 
             it("should return '8'") {
                 assertEquals("8", result)
@@ -20,7 +20,7 @@ class FizzBuzzGameTest : Spek ({
         }
 
         on("provided number is divisible by 3") {
-            val result =  game.calculate(3)
+            val result =  game.defineResponseFor(3)
 
             it("should return 'Fizz'") {
                 assertEquals("Fizz", result)
@@ -28,7 +28,7 @@ class FizzBuzzGameTest : Spek ({
         }
 
         on("provided number is divisible by 5") {
-            val result = game.calculate(5)
+            val result = game.defineResponseFor(5)
 
             it("should return 'Buzz'") {
                 assertEquals("Buzz", result)
@@ -36,7 +36,7 @@ class FizzBuzzGameTest : Spek ({
         }
 
         on("provided number is divisible by both 3 and 5") {
-            val result =  game.calculate(15)
+            val result =  game.defineResponseFor(15)
 
             it("should return 'FizzBuzz'") {
                 assertEquals("FizzBuzz", result)

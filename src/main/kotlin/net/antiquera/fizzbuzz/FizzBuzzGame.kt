@@ -1,10 +1,10 @@
 package net.antiquera.fizzbuzz
 
 class FizzBuzzGame {
-     fun calculate(number: Int): String {
+     fun defineResponseFor(number: Int): String {
          var result = ""
 
-         result += defineResutoForDivisibleBy3Number(number)
+         result += defineResultForDivisibleBy3Number(number)
          result += defineResultForDivisibleBy5Number(number)
 
          result = defineResultForNeitherDivisibleBy3Nor5(number, result)
@@ -20,7 +20,7 @@ class FizzBuzzGame {
         return number.toString()
     }
 
-    private fun defineResutoForDivisibleBy3Number(number: Int): String {
+    private fun defineResultForDivisibleBy3Number(number: Int): String {
         if (isDivisibleBy3(number)) {
             return "Fizz"
         }
@@ -36,9 +36,11 @@ class FizzBuzzGame {
         return ""
     }
 
-    private fun isDivisibleBy3(number: Int) = number % 3 == 0
+    private fun isDivisibleBy3(number: Int) = isDivisibleBy(number, 3)
 
-    private fun isDivisibleBy5(number: Int) = number % 5 == 0
+    private fun isDivisibleBy5(number: Int) = isDivisibleBy(number, 5)
+
+    private fun isDivisibleBy(number: Int, divisor: Int) = number % divisor == 0
 
 
 }
